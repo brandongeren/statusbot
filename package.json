@@ -1,0 +1,14 @@
+{
+  "name": "statusbot",
+  "version": "1.0.0",
+  "description": "Make status updates in a separate channel",
+  "main": "bot.js",
+  "scripts": {
+    "test": "start"
+  },
+  "author": "Brandon Geren",
+  "license": "MIT",
+  "dependencies": { 
+    "discord.js": "^11.5.1"
+  }
+}
