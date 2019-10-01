@@ -15,7 +15,7 @@ client.on('message', async (msg) => {
     return;
   }
   
-  commands.findCommands(msg);
+  commands.findCommands(msg, client);
 });
 
 client.login(process.env.TOKEN);
