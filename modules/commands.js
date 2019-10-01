@@ -34,10 +34,10 @@ async function findCommands(msg, client) {
   let name = msg.member && msg.member.user && msg.member.user.username;
   let status = '';
   // noelle
-  // let channelID = '628386980178427914';
+  let channelID = '628386980178427914';
 
   // dueling sim
-  let channelID = '628376170605445141';
+  // let channelID = '628376170605445141';
   let channel = client.channels.get(channelID);
 
   switch(command) {
@@ -60,7 +60,7 @@ async function findCommands(msg, client) {
         console.log('attachment found');
         await download(attachment.url, attachment.filename)
         console.log('download complete');
-        await channel.send(status, { files: [`./${attachment.filename}`] })
+        await channel.send(status, { files: [`./${attachment.filename}`] });
         console.log('message sent');
         fs.unlinkSync(`./${attachment.filename}`, (err) => {
           if (err) {
